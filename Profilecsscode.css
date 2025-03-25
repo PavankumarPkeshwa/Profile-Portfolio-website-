@@ -45,6 +45,13 @@ section{
     align-items: center;
     z-index: 100%;
 }
+.header.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
     /* Logo section desing using css  */
 .logo{
     font-size: 2.5rem;
@@ -71,6 +78,10 @@ section{
     color: var(--main-color);
 }
 
+.activerole{
+    color:greenyellow;
+}
+
 /* menu icon  */
 #menu-icon{
     font-size: 3.5rem;
@@ -87,7 +98,8 @@ align-items: center;
 }
 
 .home-img img{
-    width:30vw;
+    width:35vw;
+    animation:floatImage 4s ease-in-out infinite;
 }
 
 .home-content h3{
@@ -356,6 +368,15 @@ align-items: center;
     section{
         padding: 10rem 3% 2rem;
     }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .portfolio{
+        padding-bottom: 7rem;
+    }
+    .contact{
+        min-height: auto;
+    }
     .footer{
         padding: 2rem 3%;
     }
@@ -387,6 +408,64 @@ align-items: center;
         font-size: 2rem;
         margin: 3rem 0;
     }
-       
+    .home{
+        flex-direction: column;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-contenth1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    
+    .about{
+        flex-direction:column-reverse;
+    }
+
+    .about img{
+        width:70vw;
+        margin-top: 4rem;
+    }
+
+    .services h2{
+        margin-bottom: 3rem;
+    }
+
+    .portfolio h2{
+    margin-bottom:3rem;
+    }
+
+    .portfolio-container{
+    grid-template-columns: repeat(1,1fr);
+    }
+
 }
 
+@media (max-width: 617px){
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size:50%;
+    }
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
+@media (max-width:365px){
+    .home-img img{
+        width: 90vw;
+    }
+    .about-img img{
+        width: 90vw;
+    }
+    
+}
