@@ -46,11 +46,7 @@ section{
     z-index: 100%;
 }
 .header.sticky{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    border-bottom: .1rem solid rgba(0,0,0,.2);
 }
     /* Logo section desing using css  */
 .logo{
@@ -74,14 +70,9 @@ section{
     color:var(--main-color);
 }
 
-.activename{
-    color: var(--main-color);
+.multiple-text{
+    color: #0ef;
 }
-
-.activerole{
-    color:greenyellow;
-}
-
 /* menu icon  */
 #menu-icon{
     font-size: 3.5rem;
@@ -101,6 +92,18 @@ align-items: center;
     width:35vw;
     animation:floatImage 4s ease-in-out infinite;
 }
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 
 .home-content h3{
     font-size: 3.2rem;
@@ -166,6 +169,19 @@ align-items: center;
 
 .about-img img{
     width:35vw;
+    animation:floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-2.4rem);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 
 .heading{
