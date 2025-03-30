@@ -45,9 +45,15 @@ section{
     align-items: center;
     z-index: 100%;
 }
-.header.sticky{
-    border-bottom: .1rem solid rgba(0,0,0,.2);
+
+.header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--second-bg-color);
+    z-index: 1000;
 }
+
     /* Logo section desing using css  */
 .logo{
     font-size: 2.5rem;
@@ -203,6 +209,7 @@ align-items: center;
     margin: 2rem 0 3rem;   
 }
 
+
  /* services section designing using css */
 .services h2{
     margin-bottom: 5rem;
@@ -242,6 +249,16 @@ align-items: center;
 .services-box p{
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
+}
+
+/* skills section designing using css  */
+
+.skills{
+    background-color: var(--second-bg-color);
+}
+
+.list {
+    font-size: 4rem;
 }
 
 /* Portfolio section designing using css */
@@ -403,6 +420,20 @@ align-items: center;
         display: block;
     }
 
+    .header {
+        background: var(--bg-color); /* Ensure background is visible */
+        opacity: 1 !important; /* Force full opacity */
+        visibility: visible !important; /* Ensure visibility */
+        z-index: 9999; /* Keep it on top */
+    }
+
+    .navbar {
+        background: var(--bg-color); /* Ensure proper background color */
+        opacity: 1 !important; /* Prevent any transparency */
+        visibility: visible !important;
+        display: block; /* Ensure it's shown when toggled */
+    }
+
     .navbar {
         position: absolute;
         top: 100%;
@@ -476,6 +507,7 @@ align-items: center;
         width: 100%;
     }
 }
+
 @media (max-width:365px){
     .home-img img{
         width: 90vw;
