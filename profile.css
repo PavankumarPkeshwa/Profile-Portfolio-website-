@@ -26,6 +26,7 @@ html{
 body{
     background:var(--bg-color);
     color:var(--text-color);
+    overflow-x:hidden;
 }
 
 section{
@@ -264,7 +265,7 @@ align-items: center;
 /* Portfolio section designing using css */
 
 .portfolio{
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .portfolio h2{
@@ -344,9 +345,12 @@ align-items: center;
 
 /* Contact section designing using css  */
 
+.contact{
+    background-color: var(--second-bg-color);
+}
+
 .contact h2{
     margin-bottom: 3rem;
-
 }
 
 .contact form{
@@ -368,7 +372,7 @@ align-items: center;
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
 }
