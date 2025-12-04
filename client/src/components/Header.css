@@ -1,0 +1,136 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  background: rgba(10, 14, 39, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header.scrolled {
+  background: rgba(10, 14, 39, 0.95);
+  padding: 1rem 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-family: 'Fira Code', monospace;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: all 0.3s ease;
+}
+
+.logo-bracket {
+  color: var(--accent-primary);
+  font-weight: 400;
+}
+
+.logo-text {
+  color: var(--text-primary);
+}
+
+.logo-accent {
+  color: var(--accent-secondary);
+  font-size: 2rem;
+  margin: 0 -2px;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gradient-2);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--accent-primary);
+}
+
+.navbar a:hover::before,
+.navbar a.active::before {
+  width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  color: var(--accent-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: var(--bg-secondary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+}
